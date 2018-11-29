@@ -20,7 +20,7 @@ node{
       }  
    
       stage('Publish Docker Image'){
-         withCredentials([string(credentialsId: 'dockerpwdkuldeep', variable: 'dockerPWDkuldeep')]) {
+         withCredentials([string(credentialsId: 'dockerpwd_kuldeep', variable: 'dockerPWDkuldeep')]) {
               sh "docker login -u kuldeep031986 -p ${dockerPWDkuldeep}"
          }
         sh 'docker push kuldeep031986/javademo:2.0.0'
